@@ -1,0 +1,104 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "extends": [
+    "plugin:nuxt/recommended",
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "import",
+    "jest",
+    "jsdoc",
+    "node",
+    "nuxt",
+    "prettier",
+    "standard",
+    "vue"
+  ],
+  "rules": {
+    "curly": 2,
+    "eol-last": 2,
+    "import/no-cycle": 2,
+    "import/export": 2,
+    "import/no-deprecated": 2,
+    "import/no-mutable-exports": 2,
+    "import/no-unused-modules": 2,
+    "import/no-duplicates": 2,
+    "import/order": 2,
+    "import/newline-after-import": 2,
+    "import/no-unassigned-import": 2,
+    "keyword-spacing": [
+      2,
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "no-irregular-whitespace": 2,
+    "no-param-reassign": 2,
+    "no-trailing-spaces": 2,
+    "no-unused-vars": [
+      2,
+      {
+        "varsIgnorePattern": "Def$",
+        "argsIgnorePattern": "[var_args|config|ctx]"
+      }
+    ],
+    "nuxt/no-cjs-in-config": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ],
+    "space-before-blocks": [2, "always"],
+    "jsdoc/check-alignment": 2,
+    "jsdoc/check-examples": 0,
+    "jsdoc/check-indentation": 2,
+    "jsdoc/check-param-names": 2,
+    "jsdoc/check-syntax": 2,
+    "jsdoc/check-tag-names": 2,
+    "jsdoc/check-types": 2,
+    "jsdoc/newline-after-description": [2, "always"],
+    "jsdoc/no-undefined-types": 2,
+    "jsdoc/require-example": 0,
+    "jsdoc/require-hyphen-before-param-description": [2, "never"],
+    "jsdoc/require-jsdoc": [
+      2,
+      {
+        "publicOnly": {
+          "ancestorsOnly": true,
+          "window": true
+        },
+        "require": {
+          "ArrowFunctionExpression": true,
+          "ClassDeclaration": true,
+          "FunctionDeclaration": true,
+          "FunctionExpression": true,
+          "MethodDefinition": true
+        }
+      }
+    ],
+    "jsdoc/require-param-description": 2,
+    "jsdoc/require-param-name": 2,
+    "jsdoc/require-param-type": 2,
+    "jsdoc/require-param": 2,
+    "jsdoc/require-returns-check": 2,
+    "jsdoc/require-returns-description": 2,
+    "jsdoc/require-returns-type": 2,
+    "jsdoc/require-returns": 2,
+    "jsdoc/valid-types": 2
+  }
+}

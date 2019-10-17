@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "octref.vetur",
+    "dariofuzinato.vue-peek",
+    "hollowtree.vue-snippets",
+    "wix.vscode-import-cost",
+    "spmessman.vscode-taskexplorer",
+    "gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "donjayamanne.githistory"
+  ]
+}
