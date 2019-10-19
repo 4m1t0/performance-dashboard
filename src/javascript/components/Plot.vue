@@ -1,6 +1,6 @@
 <template>
   <v-col>
-    <v-card>
+    <v-card color="#20203B">
       <iframe
         width="100%"
         height="500"
@@ -20,5 +20,3 @@ export default {
   }
 }
 </script>
-
-<style></style>
