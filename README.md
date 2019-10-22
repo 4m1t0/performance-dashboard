@@ -2,9 +2,8 @@
 
 ## Table of Contents
 
-- [Performance Dashboard](#performance-dashboard)
-  - [Introductions](#introductions)
-  - [Build Setup](#build-setup)
+- [Introductions](#introductions)
+- [Build Setup](#build-setup)
 
 ## Introductions
 
