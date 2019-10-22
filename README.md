@@ -11,7 +11,7 @@ This is a simple tool for monitoring your web service performance.
 
 ![](./doc/resources/performance-dashboard.gif)
 
-All web developers are interested in your service performance, so we test the service with performance tools like [JMeter](https://github.com/apache/jmeter), [Vegeta](https://github.com/tsenart/vegeta), [Locust](https://github.com/locustio/locust) and so on. Now, with growing container services, we can do performance test more easier because they provide exact same environments and scalability. It means we can monitor our service performance more easier continuously.
+All web developers are interested in your service performance, so we test services with performance tools like [JMeter](https://github.com/apache/jmeter), [Vegeta](https://github.com/tsenart/vegeta), [Locust](https://github.com/locustio/locust) and so on. Now, with growing container services, we can do performance test more easier because they provide exact same environments and scalability. It means we can monitor our service performance more easier continuously.
 
 This tool is for monitoring performance based on [Locust](https://github.com/locustio/locust) reports. Although using a database and a visualization tool (e.g. [Elasticsearch](https://github.com/elastic/elasticsearch) and [Kibana](https://github.com/elastic/kibana), [MySQL](https://github.com/mysql) and [ReDash](https://github.com/getredash/redash)) is a option, but you may think preparing those just for monitoring performance is more expensive than developing a simple performance monitoring tool. If you think in a similar way, this tool is suitable because this requires storing reports in github repository and generates plots when starting the tool.
 
