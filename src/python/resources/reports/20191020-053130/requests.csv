@@ -1,0 +1,8 @@
+"Method","Name","# requests","# failures","Median response time","Average response time","Min response time","Max response time","Average Content Size","Requests/s"
+"GET","/",1011,0,199,210,32,731,4618,5.60
+"GET","/login",20,0,36,49,25,200,4805,0.11
+"POST","/login",20,0,420,443,338,605,16570,0.11
+"POST","/logout",20,0,830,850,672,1950,4377,0.11
+"GET","/my/page",1967,0,240,258,37,698,10468,10.90
+"GET","/projects",1012,0,198,208,35,660,5665,5.61
+"None","Total",4050,0,220,237,25,1950,7780,22.43

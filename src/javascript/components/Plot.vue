@@ -1,12 +1,13 @@
 <template>
   <v-col>
-    <v-card color="#20203B">
+    <v-card color="#1E1E38">
       <iframe
         width="100%"
         height="500"
         frameborder="0"
         seamless="seamless"
         scrolling="no"
+        loading="lazy"
         :src="this.url"
       ></iframe>
     </v-card>

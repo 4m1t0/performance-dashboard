@@ -31,7 +31,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
@@ -55,9 +55,39 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-buffer',
+          title: 'Total',
+          to: '/total'
+        },
+        {
+          icon: 'mdi-api',
+          title: 'GET /',
+          to: '/get'
+        },
+        {
+          icon: 'mdi-api',
+          title: 'GET /login',
+          to: '/get/login'
+        },
+        {
+          icon: 'mdi-api',
+          title: 'GET /my/page',
+          to: '/get/my/page'
+        },
+        {
+          icon: 'mdi-api',
+          title: 'GET /projects',
+          to: '/get/projects'
+        },
+        {
+          icon: 'mdi-api',
+          title: 'POST /login',
+          to: '/post/login'
+        },
+        {
+          icon: 'mdi-api',
+          title: 'POST /logout',
+          to: '/post/logout'
         }
       ],
       miniVariant: false,
@@ -79,5 +109,9 @@ body {
 }
 .theme--dark.v-application {
   background: #121221;
+}
+.container--fluid {
+  padding-left: 12rem;
+  padding-right: 12rem;
 }
 </style>
