@@ -16,7 +16,7 @@ class LocustResourceProcessor:
         )
 
     def process(self, report_dir):
-        """Return processed reports as DataFrame
+        """Return processed reports as DataFrame.
 
         Args:
             report_dir: directory having locust reports.
