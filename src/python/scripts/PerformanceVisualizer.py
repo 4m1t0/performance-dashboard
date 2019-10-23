@@ -3,6 +3,7 @@ import os
 
 
 class PerformanceVisualizer:
+
     def __init__(self, preprocessor):
         self.preprocessor = preprocessor
         self.keys = [
@@ -91,7 +92,4 @@ time_formatter = TimeFormatter.TimeFormatter('YYYYMMDD_HHMMSS1')
 visualizer = PerformanceVisualizer(
     PreProcessor.PreProcessor('LOCUST', time_formatter))
 visualizer.visualize(
-    os.path.join(os.path.dirname(__file__), '../resources/reports/')
-
-
-)
+    os.path.join(os.path.dirname(__file__), '../resources/reports/'))
