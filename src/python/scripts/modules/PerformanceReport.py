@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 import sys
 
 
-class Plot:
+class PerformanceReport:
     def __init__(self, reports):
         self.fontsize = 11
         self.reports = reports
@@ -232,7 +232,7 @@ class Plot:
             sys.exit(1)
 
         df = self.reports[self.reports['Name'] == name].sort_values(
-            'DateTime', ascending=False, inplace=False)
+            'DateTime', ascending=True, inplace=False)
 
         keys = [
             '50%',

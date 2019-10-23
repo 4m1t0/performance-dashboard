@@ -1,4 +1,4 @@
-from modules import Plot, PreProcessor, TimeFormatter
+from modules import PerformanceReport, PreProcessor, TimeFormatter
 import os
 
 
@@ -28,26 +28,26 @@ class PerformanceVisualizer:
         if not os.path.isdir(static_dir + '/shared'):
             os.makedirs(static_dir + '/shared')
 
-        plot = Plot.Plot(reports)
+        performance_report = PerformanceReport.PerformanceReport(reports)
 
-        plot.percentilePlot(
+        performance_report.percentilePlot(
             key='99%',
             filename=static_dir +
                 '/shared/99percentiles.html')
-        plot.rpsTimelineChart(
+        performance_report.rpsTimelineChart(
             filename=static_dir
             + '/shared/rps-timeline-chart.html')
-        plot.requestsTimelineChart(
+        performance_report.requestsTimelineChart(
             key='# requests',
             title='# of requests',
             filename=static_dir +
                 '/shared/num-of-requests.html')
-        plot.requestsTimelineChart(
+        performance_report.requestsTimelineChart(
             key='# failures',
             title='# of failures',
             filename=static_dir +
                 '/shared/num-of-errors.html')
-        plot.activityChart(
+        performance_report.activityChart(
             filename=static_dir +
             '/shared/activity-chart.html')
 
@@ -61,12 +61,12 @@ class PerformanceVisualizer:
             if not os.path.isdir(plot_path):
                 os.makedirs(plot_path)
 
-            plot.distributedDotPlot(
+            performance_report.distributedDotPlot(
                 name=uniq_report,
                 filename=plot_path
                 + 'distributed-dot-plot.html')
 
-            plot.rpsTimelineChart(
+            performance_report.rpsTimelineChart(
                 name=uniq_report,
                 filename=plot_path
                 + 'rps-timeline-chart.html')
@@ -75,22 +75,16 @@ class PerformanceVisualizer:
                 prefix = key.split(' ')[0].lower(
                 ) if 'time' in key else key[:2] + 'percentile'
 
-                plot.percentilePlot(
+                performance_report.percentilePlot(
                     name=uniq_report,
                     key=key,
                     filename=plot_path
                     + prefix + '-timeline-chart.html')
-                plot.degradationPlot(
+                performance_report.degradationPlot(
                     name=uniq_report,
                     key=key,
                     filename=plot_path
                     + prefix + '-degradation-timeline-chart.html')
-
-    def debug(self):
-        df = self.preprocessor.process(
-            os.path.join(os.path.dirname(__file__), '../resources/reports/')
-        )
-        df.to_csv('debug.csv', index=False)
 
 
 time_formatter = TimeFormatter.TimeFormatter('YYYYMMDD_HHMMSS1')
@@ -101,4 +95,3 @@ visualizer.visualize(
 
 
 )
-# visualizer.debug()
