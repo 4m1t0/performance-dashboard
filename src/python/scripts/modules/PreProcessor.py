@@ -36,6 +36,27 @@ class PreProcessor:
         self.time_formatter = time_formatter
 
     def process(self, reports_path):
+        """Performance Report as pandas DataFrame.
+
+        Args:
+            reports_dir: directory having directory \
+                which includes locust reports.
+
+        Returns:
+            reports [pandas.DataFrame]: Having performance test reports and \
+                following columns.
+                    1.  Name: test target.
+                    2.  # requests: number of requests.
+                    3.  99%: 99%tile Latency. any %tile Latency is available \
+                          because you have to assign key when plotting charts.
+                    4.  Median response time: 50%tile Latency.
+                    5.  Average response time: ditto.
+                    6.  Min response time: ditto.
+                    8.  Max response time: ditto.
+                    4.  # failures: number of failures.
+                    9.  Requests/s: requests per second.
+                    10: DateTime [pandas.TimeStamp]: date executed test.
+        """
         report_dirs = [f for f in os.listdir(reports_path) if os.path.isdir(
             os.path.join(reports_path, f))]
 

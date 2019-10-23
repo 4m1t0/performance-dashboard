@@ -7,7 +7,25 @@ import sys
 
 
 class PerformanceReport:
+
     def __init__(self, reports):
+        """Performance Report as pandas DataFrame.
+
+        Args:
+            reports [pandas.DataFrame]: Having performance test reports and \
+                following columns.
+                    1.  Name: test target.
+                    2.  # requests: number of requests.
+                    3.  99%: 99%tile Latency. any %tile Latency is available \
+                          because you have to assign key when plotting charts.
+                    4.  Median response time: 50%tile Latency.
+                    5.  Average response time: ditto.
+                    6.  Min response time: ditto.
+                    7.  Max response time: ditto.
+                    8.  # failures: number of failures.
+                    9.  Requests/s: requests per second.
+                    10: DateTime [pandas.TimeStamp]: date executed test.
+        """
         self.fontsize = 11
         self.reports = reports
         self.reports.sort_values('DateTime', ascending=True, inplace=True)

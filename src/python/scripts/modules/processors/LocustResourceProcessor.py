@@ -5,6 +5,7 @@ import sys
 
 
 class LocustResourceProcessor:
+
     def __init__(
             self,
             distribution_filename='distribution.csv',
@@ -15,6 +16,25 @@ class LocustResourceProcessor:
         )
 
     def process(self, report_dir):
+        """Return processed reports as DataFrame
+
+        Args:
+            report_dir: directory having locust reports.
+
+        Returns:
+            reports [pandas.DataFrame]: Having performance test reports and \
+                following columns.
+                    1.  Name: test target.
+                    2.  # requests: number of requests.
+                    3.  99%: 99%tile Latency. ny %tile Latency is available \
+                          because you have to assign key when plotting charts.
+                    4.  Median response time: 50%tile Latency.
+                    5.  Average response time: ditto.
+                    6.  Min response time: ditto.
+                    7.  Max response time: ditto.
+                    8.  # failures: number of failures.
+                    9.  Requests/s: requests per second.
+        """
         reports = os.listdir(report_dir)
         self._validateDir(reports)
 
