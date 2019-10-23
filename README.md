@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Introductions](#introductions)
+- [Requirements](#requirements)
 - [Build Setup](#build-setup)
 
 ## Introductions
@@ -16,6 +17,8 @@ All web developers are interested in your service performance, so we test servic
 This tool is for monitoring performance based on [Locust](https://github.com/locustio/locust) reports. Although using a database and a visualization tool (e.g. [Elasticsearch](https://github.com/elastic/elasticsearch) and [Kibana](https://github.com/elastic/kibana), [MySQL](https://github.com/mysql) and [ReDash](https://github.com/getredash/redash)) is a option, but you may think preparing those just for monitoring performance is more expensive than developing a simple performance monitoring tool. If you think in a similar way, this tool is suitable because this requires storing reports in github repository and generates plots when starting the tool.
 
 Of course you can use other performance tool reports by developing scripts for formatting its for plotting charts and adding it as a processor.
+
+## Requirements
 
 This tool requires you basic knowledge about the following:
 
@@ -57,14 +60,14 @@ This tool requires you basic knowledge about the following:
 # install dependencies
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# generate plots and serve with hot reload
 $ yarn run dev
 
-# build for production and launch server
+# generate plots, build for production and launch server
 $ yarn run build
 $ yarn run start
 
-# generate static project
+# generate plots and static project
 $ yarn run generate
 ```
 

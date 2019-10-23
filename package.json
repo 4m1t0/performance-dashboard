@@ -10,10 +10,10 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "python src/python/scripts/PerformanceVisualizer.py; nuxt",
+    "build": "python src/python/scripts/PerformanceVisualizer.py; nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "python src/python/scripts/PerformanceVisualizer.py; nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
