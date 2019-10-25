@@ -59,6 +59,7 @@ This tool requires you basic knowledge about the following:
 ```bash
 # install dependencies
 $ yarn install
+$ pip install -r python-requirements.txt
 
 # generate plots and serve with hot reload
 $ yarn run dev
