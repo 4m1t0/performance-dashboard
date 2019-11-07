@@ -18,6 +18,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
+          color="#FFFFFF"
           router
           exact
         >
